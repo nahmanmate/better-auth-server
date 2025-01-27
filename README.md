@@ -28,8 +28,10 @@ Enterprise-grade authentication solution providing:
 
 ## Development
 
-Install dependencies:
+Clone and install:
 ```bash
+git clone https://github.com/better-auth-mcp-server/better-auth-mcp-server.git
+cd better-auth-mcp-server
 npm install
 ```
 
