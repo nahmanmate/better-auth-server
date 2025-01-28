@@ -8,6 +8,8 @@ Enterprise-grade authentication solution providing:
 - ⚙️ Multi-protocol auth (OAuth2, SAML, LDAP)
 - 🛡️ Real-time threat detection and prevention
 
+<a href="https://glama.ai/mcp/servers/7f1irpro2i"><img width="380" height="200" src="https://glama.ai/mcp/servers/7f1irpro2i/badge" alt="Better Auth Server MCP server" /></a>
+
 ## Features
 
 ### Core Tools
