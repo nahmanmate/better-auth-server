@@ -1,0 +1,28 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - betterAuthProjectId
+      - betterAuthApiKey
+    properties:
+      betterAuthProjectId:
+        type: string
+        description: The project ID for the Better-Auth MCP server.
+      betterAuthApiKey:
+        type: string
+        description: The API key for the Better-Auth MCP server.
+      betterAuthEnv:
+        type: string
+        description: The environment for the Better-Auth MCP server
+          (development|staging|production).
+      logLevel:
+        type: string
+        description: The logging level (info|debug|error).
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({command: 'node', args: ['build/index.js'], env: {BETTER_AUTH_PROJECT_ID: config.betterAuthProjectId, BETTER_AUTH_API_KEY: config.betterAuthApiKey, BETTER_AUTH_ENV: config.betterAuthEnv || 'production', LOG_LEVEL: config.logLevel || 'info'}})
