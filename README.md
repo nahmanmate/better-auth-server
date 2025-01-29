@@ -1,4 +1,5 @@
 # better-auth-mcp-server MCP Server
+[![smithery badge](https://smithery.ai/badge/@nahmanmate/better-auth-mcp-server)](https://smithery.ai/server/@nahmanmate/better-auth-mcp-server)
 
 MCP Server for Authentication Management
 
@@ -77,6 +78,14 @@ LOG_LEVEL=info|debug|error
 
 ## Installation
 
+### Installing via Smithery
+
+To install Better Auth MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@nahmanmate/better-auth-mcp-server):
+
+```bash
+npx -y @smithery/cli install @nahmanmate/better-auth-mcp-server --client claude
+```
+
 To use with Claude Desktop, add the server config:
 
 On MacOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -136,3 +145,5 @@ await mcp.useTool('generate_migration_plan', {
   projectPath: './my-next-app',
   currentAuthType: 'next-auth'
 });
+
+```
